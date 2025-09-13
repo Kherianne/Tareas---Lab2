@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarea 4 Samael Ríos</title>
+  <style>
+        body {
+        margin: 10px;
+        padding: 10px;
+        background-color: #e6d6c0;
+        }
+        .contenedor {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            grid-template-rows: repeat(4, 1fr);    
+            gap: 10px;
+            height: 100vh;
+        }
+        .contenido {
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: black;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 20%;
+            transition: 0.5s;
+            border-radius: 20px;
+        }
+        img:hover {
+            opacity: 100%;
+            cursor: pointer;
+        }
+
+        #img1 {
+            grid-column: 1 / 3;       
+            grid-row: 1 / 2;          
+        }
+
+        #img2 {
+            grid-column: 1 / 2; 
+            grid-row: 2 / 4;
+        }
+
+        #img3 {
+            grid-column: 2 / 4;
+            grid-row: 2 / 3;
+        }
+
+        #img4 {
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+        }
+
+        #img5 {
+            grid-column: 4 / 5;       
+            grid-row: 1 / 3;          
+        }
+
+        #img6 {
+            grid-column: 2 / 3;       
+            grid-row: 3 / 4;         
+        }
+        
+        #img7 {
+            grid-column: 1 / 3;       
+            grid-row: 4 / 5;         
+        }
+        
+        #img8 {
+            grid-column: 3 / 5;     
+            grid-row: 3 / 5;        
+            }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="contenido" id="img1"><img src="img1.jpg"></div>
+        <div class="contenido" id="img2"><img src="img2.jpg"></div>
+        <div class="contenido" id="img3"><img src="img3.jpg"></div>
+        <div class="contenido" id="img4"><img src="img4.jpg"></div>
+        <div class="contenido" id="img5"><img src="img5.jpg"></div>
+        <div class="contenido" id="img6"><img src="img6.jpg"></div>
+        <div class="contenido" id="img7"><img src="img7.jpeg"></div>
+        <div class="contenido" id="img8"><img src="img8.jpeg"></div>
+    </div>
+</body>
+</html>
