@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cuadro con cambio de color</title>
+  <style>
+    body {
+      background-color: #393352;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #cuadro {
+      width: 200px;
+      height: 200px;
+      background-color: gray;
+      border: 4px solid black;
+      transition: background-color 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="cuadro"></div>
+
+  <script>
+    const cuadro = document.getElementById("cuadro");
+    let mouseEncima = false;
+
+    
+    cuadro.addEventListener("mouseenter", () => mouseEncima = true);
+    cuadro.addEventListener("mouseleave", () => mouseEncima = false);
+
+    
+    cuadro.addEventListener("click", () => {
+      if (mouseEncima) {
+        cuadro.style.backgroundColor = colorAleatorio();
+      }
+    });
+
+   
+    function colorAleatorio() {
+      const colores = ["lime", "orange", "skyblue", "violet", "gold", "tomato"];
+      const indice = Math.floor(Math.random() * colores.length);
+      return colores[indice];
+    }
+  </script>
+
+</body>
+</html>

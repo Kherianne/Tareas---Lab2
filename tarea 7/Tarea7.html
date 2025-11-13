@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Estela del mouse</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: #0b3d2e; /* verde musgo/petróleo */
+      overflow: hidden;
+    }
+
+    .punto {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background-color: #bfff00; 
+      border-radius: 50%;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    document.addEventListener("mousemove", (e) => {
+      const punto = document.createElement("div");
+      punto.className = "punto";
+      punto.style.left = e.clientX + "px";
+      punto.style.top = e.clientY + "px";
+      document.body.appendChild(punto);
+
+      
+      setTimeout(() => {
+        punto.remove();
+      }, 500); 
+    });
+  </script>
+
+</body>
+</html>

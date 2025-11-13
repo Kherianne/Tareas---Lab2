@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarea 5</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', serif; 
+      background-color: #0b3d2e; 
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    input, button {
+      font-size: 18px;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    #resultado {
+      margin-top: 30px;
+      font-size: 100px; 
+      color: #bfff00;  
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="color: white;">Escribe una palabra</h2>
+  <input id="palabra" placeholder="Tu palabra aquí">
+  <button id="mostrar">Mostrar</button>
+  <p id="resultado"></p>
+
+  <script>
+    document.getElementById("mostrar").addEventListener("click", () => {
+      let texto = document.getElementById("palabra").value;
+      document.getElementById("resultado").innerHTML = texto;
+    });
+  </script>
+
+</body>
+</html>
